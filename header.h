@@ -1,13 +1,13 @@
 #ifndef HEADER_H
 #define HEADER_H
-/*
-#include <QMainWindow>
+
+#include <QObject>
 
 
 class Counter : public QObject {
     Q_OBJECT
 private:
-    int m_nValue;
+    int Count;
 
 public:
     Counter();
@@ -16,8 +16,8 @@ public slots:
     void slotInc();
 
 signals:
-    void goodbye       (   );
-    void counterChanged(int);
+    void Exit();
+    void labelChange(QString);
 };
-*/
+
 #endif // HEADER_H
