@@ -12,9 +12,10 @@ TARGET = AngryButton
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    header.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    header.h
 
-FORMS    += mainwindow.ui
+FORMS    +=
