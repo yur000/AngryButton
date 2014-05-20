@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 {
     QApplication app(argc, argv);
     QWidget      wgt;
-    QLabel      *text = new QLabel("Hi!");
+    QLabel      *text = new QLabel("Хэй!");
     QPushButton *abut = new QPushButton("Push me!");
     QBoxLayout  *Layout = new QBoxLayout(QBoxLayout::TopToBottom);
     Counter     counter;

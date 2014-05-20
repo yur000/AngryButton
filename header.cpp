@@ -8,10 +8,10 @@ Counter::Counter() : QObject()
 void Counter::slotInc()
 {
     ++Count;
-    QString str[] = {"","Num 1","Numb 2","Num 3","Numb 4","Num 5"};
+    QString str[] = {"","Еще!","Давай, давай!","Не надоело ли?","Может уже хватит?","СЧА ВЗОРВУСЬ!!!"};
     emit labelChange(str[Count]);
 
-    if (Count == 5) {
+    if (Count == 6) {
         emit Exit();
     }
 }
