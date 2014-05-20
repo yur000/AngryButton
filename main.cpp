@@ -21,7 +21,6 @@ int main(int argc, char** argv)
     wgt.setLayout(Layout);
     wgt.resize(180, 100);
     wgt.show();
-
     QObject::connect(abut, SIGNAL(clicked()),
                      &counter, SLOT(slotInc())
                     );
