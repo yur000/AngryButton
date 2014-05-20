@@ -19,3 +19,6 @@ HEADERS  += \
     header.h
 
 FORMS    +=
+
+OTHER_FILES += \
+    README.md
