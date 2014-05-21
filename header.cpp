@@ -5,12 +5,19 @@ Counter::Counter() : QObject()
 {
 }
 
-void Counter::slotInc()
+void Counter::slotButton()
 {
-    ++Count;
+    ++Count;                        // Counting pushes
     if (Count == 6) {
-        emit Exit();
+        emit exit();                // If button pushed 6 times - send signal
     }
-    QString str[] = {"","Еще!","Давай, давай!","Не надоело ли?","Может уже хватит?","СЧА ВЗОРВУСЬ!!!",""};
-    emit labelChange(str[Count]);
+    QString str[] = {"",
+                     "Еще!",
+                     "Давай, давай!",
+                     "Не надоело ли?",
+                     "Может уже хватит?",
+                     "СЧА ВЗОРВУСЬ!!!",
+                     ""
+                    };
+    emit labelChange(str[Count]);    // Send signal with text
 }

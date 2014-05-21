@@ -9,6 +9,7 @@
 // ----------------------------------------------------------------------
 int main(int argc, char** argv)
 {
+    // Init
     QApplication app(argc, argv);
     QWidget      wgt;
     QLabel      *text = new QLabel("Хэй!");
@@ -16,20 +17,25 @@ int main(int argc, char** argv)
     QBoxLayout  *Layout = new QBoxLayout(QBoxLayout::TopToBottom);
     Counter     counter;
 
-    Layout->addWidget(text,1);
-    Layout->addWidget(abut,2);
+    // Building window
+    Layout->addWidget(text, 0,Qt::AlignCenter);
+    Layout->setMargin(10);
+    Layout->addWidget(abut);
     wgt.setLayout(Layout);
-    wgt.resize(180, 100);
+    wgt.resize(200, 100);
+    wgt.setWindowTitle("Angry Button");
     wgt.show();
+
+    // Connecting SLOTs and SIGNALs
     QObject::connect(abut, SIGNAL(clicked()),
-                     &counter, SLOT(slotInc())
+                     &counter, SLOT(slotButton())
                     );
 
     QObject::connect(&counter, SIGNAL(labelChange(QString)),
                      text, SLOT(setText(QString))
                     );
 
-    QObject::connect(&counter, SIGNAL(Exit()),
+    QObject::connect(&counter, SIGNAL(exit()),
                      &app, SLOT(quit())
                      );
 

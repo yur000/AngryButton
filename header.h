@@ -13,10 +13,10 @@ public:
     Counter();
 
 public slots:
-    void slotInc();
+    void slotButton();
 
 signals:
-    void Exit();
+    void exit();
     void labelChange(QString);
 };
 
